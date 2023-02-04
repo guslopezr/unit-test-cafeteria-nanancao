@@ -13,10 +13,9 @@ describe('GET /cafes Test', () => {
     });
 });
 
-//tengo duda de este...
 
 describe('Comprueba que se obtiene un código 404 al intentar eliminar un café con un id que no existe', () => {
-    it('returns a 404 status code when the cafe ID is not found', async() => {
+    it('Devuelve un código de estado 404 cuando no se encuentra el identificador de la cafetería', async() => {
         const response = await request(server)
             .delete('/cafes/999');
 
@@ -24,7 +23,6 @@ describe('Comprueba que se obtiene un código 404 al intentar eliminar un café 
     });
 });
 
-/// este está ok
 
 describe("Test POST /cafes route", () => {
     test("Prueba que la ruta POST /cafes agrega un nuevo café y devuelve un código 201.", async() => {
@@ -41,7 +39,6 @@ describe("Test POST /cafes route", () => {
     });
 });
 
-///tengo duda de este
 
 describe("Test PUT /cafes route", () => {
     test("Prueba que la ruta PUT /cafes devuelve un status code 400 si intentas actualizar un café enviando un id en los parámetros que sea diferente al id dentro del payload.", async() => {
